@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">TestJetBrains</string>
     <string name="empty_list">The List is Empty</string>
+    <string name="forks">Forks:</string>
+    <string name="open_issues">OpenIssues:</string>
+    <string name="watchers">Watchers:</string>
 </resources>
