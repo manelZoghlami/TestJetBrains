@@ -1,6 +1,7 @@
 package com.example.testjetbrains.di.modules
 
 import android.content.Context
+import com.example.datalayer.api.JetBrainsApi
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -50,6 +51,11 @@ class NetworkModule {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
+    }
+
+    @Provides
+    fun provideJetBrainsApi(retrofit: Retrofit): JetBrainsApi {
+        return retrofit.create(JetBrainsApi::class.java)
     }
 
 }

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.MaterialComponents.CardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12sp"
+    android:layout_marginTop="5sp"
+    android:layout_marginEnd="5sp"
+    android:layout_marginBottom="5sp"
+    app:cardBackgroundColor="@color/purple_500"
+    app:cardCornerRadius="30dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/size">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/full_name"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_flag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Full Name" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/forks"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_flag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/full_name"
+            tools:text="Forks" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/open_issues"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView_flag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forks"
+            tools:text="Open Issues" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/watchers"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/image_view_flag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/open_issues"
+            tools:text="Watchers" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_flag"
+            android:layout_width="65dp"
+            android:layout_height="@dimen/sizeIcon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_trending_flat_24"
+            app:tint="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
