@@ -47,6 +47,14 @@ class ListFragment : Fragment() {
         )
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnListFragmentListener) {
+            this.mListener = context
+        } else {
+            throw IllegalStateException("Activity must implement OnAddCityListFragmentListener")
+        }
+    }
     companion object {
         @JvmStatic
         fun newInstance() = ListFragment()

@@ -35,5 +35,7 @@ class ListView(
         adapter.updateListener(this)
     }
 
-
+    override fun onItemClicked(fullName: String, description: String) {
+        goToDetailFragment.invoke(fullName, description)
+    }
 }

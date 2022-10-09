@@ -28,6 +28,9 @@ internal class ListAdapter : RecyclerView.Adapter<ListAdapter.JetBrainsViewHolde
         binding.forks.text = item.forks
         binding.openIssues.text = item.openIssues
         binding.watchers.text = item.watchers
+        holder.itemView.setOnClickListener {
+            listener?.onItemClicked(item.fullName,item.description)
+        }
     }
 
     fun updateListener(listener: OnItemListClickedListener) {
@@ -37,5 +40,7 @@ internal class ListAdapter : RecyclerView.Adapter<ListAdapter.JetBrainsViewHolde
     class JetBrainsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     interface OnItemListClickedListener {
+        fun onItemClicked(fullName: String, description: String)
+
     }
 }

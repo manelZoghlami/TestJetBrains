@@ -4,4 +4,6 @@
     <string name="forks">Forks:</string>
     <string name="open_issues">OpenIssues:</string>
     <string name="watchers">Watchers:</string>
+    <string name="description">Description:</string>
+    <string name="full_name">FullName:</string>
 </resources>
